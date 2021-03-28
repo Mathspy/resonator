@@ -1,0 +1,43 @@
+name: Try repo and commit
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  try:
+    name: Trying a new codebase
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install esy
+        run: npm install -g esy
+
+      - name: Ensure work
+        run: mkdir -p work
+
+      - name: Navigating to work
+        run: cd work
+
+      - name: 'Cloning repo'
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: pupilfirst/pupilfirst
+          path: work/pupilfirst
+
+      - name: Running script
+        run: ./run.sh
+
+      - uses: EndBug/add-and-commit@v7
+        with:
+          add: "results"
+          author_name: Melange Resonator
+          author_email: resonator@melange.re
