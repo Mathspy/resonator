@@ -1,0 +1,6 @@
+Info: Creating file dune-project with this contents:
+| (lang dune 2.8)
+File "dune.bsb", line 605, characters 191-193:
+605 |  (run bsc -w +A-4-40-42 -warn-error +A -bs-v 9.1.0,1616931272. -ppx "/Users/mathspy/Coding/reason-experiments/resonator/work/relude_melange/node_modules/bisect_ppx/ppx --exclude-files .*_test\.re$$ --exclude-files .*\/testUtils\/.*\.re$$" -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+                                                                                                                                                                                                     ^^
+Error: unknown escape sequence
