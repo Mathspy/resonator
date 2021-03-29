@@ -19,7 +19,7 @@ npx bsb -make-world -clean-world 2>> ../../results/pupilfirst/avant.stderr 1>> .
 echo $? > ../../results/pupilfirst/avant
 
 cd ../pupilfirst_melange
-cp ../../esy.json .
+cp ../../files/* .
 npm install
 rm -rf node_modules/bs-platform
 esy
