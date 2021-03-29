@@ -1,10 +1,15 @@
-#!/bin/sh
+#!/bin/bash
 
-mkdir -p work
-mkdir -p results
-cd work
+if [[ -z "${CI}" ]]; then
+  mkdir -p work
+  mkdir -p results
+  cd work
 
-git clone --depth=1 git@github.com:pupilfirst/pupilfirst.git
+  git clone --depth=1 git@github.com:pupilfirst/pupilfirst.git
+else
+  cd work
+fi
+
 cp -r pupilfirst pupilfirst_melange
 mkdir -p ../results/pupilfirst
 
