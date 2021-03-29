@@ -3,7 +3,7 @@
     "bs-platform": "*"
   },
   "resolutions": {
-    "bs-platform": "melange-re/melange#4ec240c",
+    "bs-platform": "melange-re/melange#f5cb19b",
     "ocaml": "melange-re/ocaml#75f22c8"
   },
   "esy": {
